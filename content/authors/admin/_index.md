@@ -44,9 +44,9 @@ profiles:
     url: https://orcid.org/
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Disco
+  - Partying
+  - Eating Rice
 
 education:
   - area: PhD Artificial Intelligence
