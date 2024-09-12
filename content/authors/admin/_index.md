@@ -7,7 +7,7 @@ first_name: Aditya
 last_name: Iyer
 
 # Status emoji
-status:
+status: dead X(
   icon: 
 
 # Is this the primary user of the site?
