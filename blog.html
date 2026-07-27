@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (function () {
+    var stored = localStorage.getItem("theme");
+    var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<title>Blog — [Your Name]</title>
+<meta name="description" content="Blog posts by [Your Name].">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<button class="theme-fab" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.3A9 9 0 1 1 11.7 3a7 7 0 0 0 9.3 9.3Z"/></svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.2M12 19.3v2.2M4.4 4.4l1.6 1.6M18 18l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.4 19.6l1.6-1.6M18 6l1.6-1.6"/></svg>
+</button>
+
+<div class="mobile-bar">
+  <p class="name">[Your Name]</p>
+  <button class="nav-toggle" aria-expanded="false">MENU</button>
+</div>
+
+<div class="shell">
+
+  <aside class="card">
+    <span class="card-tab">REF</span>
+    <div class="card-inner">
+      <div class="portrait">
+        <img src="images/portrait-placeholder.svg" alt="[Your Name]">
+      </div>
+      <h1 class="name" style="font-size:26px;">[Your Name]</h1>
+      <p class="role">[Your Position]</p>
+      <p class="affiliation">[Your Institution]<br>[City, Country]</p>
+
+      <span class="stamp">OPEN TO COLLAB</span>
+
+      <ul class="contact-list">
+        <li><span class="lbl">MAIL</span><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><span class="lbl">GITHUB</span><a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
+        <li><span class="lbl">SCHOLAR</span><a href="#" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><span class="lbl">CV</span><a href="files/CV.pdf" target="_blank" rel="noopener">Download PDF</a></li>
+      </ul>
+
+      <nav>
+        <ul class="sidenav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
+      </nav>
+
+      <p class="card-footer">Card No. 004 — updated [Month Year]</p>
+    </div>
+  </aside>
+
+  <main>
+    <div class="content">
+      <p class="eyebrow">Blog</p>
+      <h1 class="title">Blog</h1>
+
+      <section class="block reveal">
+        <div class="post-preview">
+          <span class="date">[Mon DD, YYYY]</span>
+          <h3><a href="posts/sample-post.html">[Sample post title — replace me]</a></h3>
+          <p>[A one- or two-sentence excerpt describing what this post covers, to give readers a reason to click through.]</p>
+          <a class="more-link" href="posts/sample-post.html">Read more →</a>
+        </div>
+
+        <div class="post-preview">
+          <span class="date">[Mon DD, YYYY]</span>
+          <h3>[Next post title]</h3>
+          <p>[Duplicate posts/sample-post.html to create this one, then link it here.]</p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      © [Year] [Your Name]. Built with plain HTML &amp; CSS, hosted on GitHub Pages.
+    </footer>
+  </main>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
