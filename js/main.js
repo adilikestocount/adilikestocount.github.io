@@ -46,4 +46,17 @@
     }, { threshold: 0.1 });
     sections.forEach(function (el) { observer.observe(el); });
   }
+
+  // "Updated" date in the sidebar. Fills <span id="updated"> with the
+  // date the server says this page was last changed, as MM/DD/YY.
+  var updated = document.getElementById("updated");
+  if (updated) {
+    var d = new Date(document.lastModified);
+    if (!isNaN(d)) {
+      var mm = String(d.getMonth() + 1).padStart(2, "0");
+      var dd = String(d.getDate()).padStart(2, "0");
+      var yy = String(d.getFullYear()).slice(-2);
+      updated.textContent = mm + "/" + dd + "/" + yy;
+    }
+  }
 })();
